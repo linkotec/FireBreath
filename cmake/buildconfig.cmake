@@ -14,12 +14,8 @@
 
     
 if (WIN32)
-    set(CMAKE_C_FLAGS                            "/DWIN32 /DFB_WIN=1 /DXP_WIN=1 /W3 /wd4996 /nologo /D UNICODE /D _UNICODE /D _WINDOWS")
-    if (NOT WITH_SYSTEM_BOOST)
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /D BOOST_ALL_NO_LIB=1")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /D BOOST_ALL_NO_LIB=1")
-    endif()
-    set(CMAKE_CXX_FLAGS                          "/DWIN32 /DFB_WIN=1 /DXP_WIN=1 /W3 /wd4996 /nologo /EHsc /wd4290 /D UNICODE /D _UNICODE /D _WINDOWS")
+    set(CMAKE_C_FLAGS                            "/DWIN32 /DFB_WIN=1 /DXP_WIN=1 /W3 /wd4996 /nologo /D UNICODE /D _UNICODE /D _WINDOWS /D BOOST_ALL_NO_LIB=1")
+    set(CMAKE_CXX_FLAGS                          "/DWIN32 /DFB_WIN=1 /DXP_WIN=1 /W3 /wd4996 /nologo /EHsc /wd4290 /D UNICODE /D _UNICODE /D _WINDOWS /D BOOST_ALL_NO_LIB=1")
     set(CMAKE_C_FLAGS_RELEASE                    "/MT /Ox /DNDEBUG")
     set(CMAKE_CXX_FLAGS_RELEASE                  "/MT /Ox /DNDEBUG")
 	# x64 does not support edit-and-continue.
